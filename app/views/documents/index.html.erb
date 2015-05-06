@@ -16,3 +16,33 @@
     </tr>
   </table>
 <% end %>
+
+<!-- Small modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Get Quote</button>
+
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <form class="" action="<%= documents_url%>" method="post">
+        <input
+          type="hidden"
+          name="authenticity_token"
+          value="<%= form_authenticity_token %>">
+
+          <label>Loan Amount
+            <input type="number" name="document[loan_amount]">
+          </label>
+
+          <label>Interest Rate
+            <input type="number" name="document[interest_rate]">
+          </label>
+
+          <label>Downpayment
+            <input type="number" name="document[downpayment]">
+          </label>
+
+          <input type="submit" value="Get Quote">
+      </form>
+    </div>
+  </div>
+</div>
