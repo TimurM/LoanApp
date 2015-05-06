@@ -1,4 +1,5 @@
 class DocumentsController < ApplicationController
+  before_action: require_signed_in!
 
   def index
     @documents = current_user.documents
