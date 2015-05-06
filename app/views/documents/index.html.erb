@@ -1,0 +1,18 @@
+
+<% @documents.each do |document| %>
+  <table>
+    <tr>
+      <td>id</td>
+      <td>loan amount</td>
+      <td>interest rate</td>
+      <td>downpayment</td>
+      <td>pdf link</td>
+    </tr>
+    <tr>
+      <td><%= document.id %></td>
+      <td><%=document.loan_amount %></td>
+      <td><%= document.interest_rate %></td>
+      <td><%=document.downpayment %></td>
+    </tr>
+  </table>
+<% end %>

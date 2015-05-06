@@ -11,8 +11,7 @@ class SessionsController < ApplicationController
 
     if user
       sign_in(user)
-      # redirect_to root_url
-      render json: user
+      redirect_to documents_url
     else
       flash.now[:errors] = ["Invalid email or password"]
       render :new
