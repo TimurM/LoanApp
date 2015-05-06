@@ -11,13 +11,10 @@ LoanApp is a Rails app that takes user's input and generates a pdf.
 - [ ] Host the App on Heroku
 - [ ] Host the documents on Amazon S3 services
 
-## Design Docs
-* [DB schema][schema]
-
 ## Implementation Timeline
 
 ### Phase 1: User Authentication (~1 day)
-In Phase 1, I'm planning on setting up authentication for the User to create an account and sign in. In addition, I'm going to create Schema, Models and Controllers to generate documents RAILS. Before starting Phase 2, I will also push the app to Heroku.
+In Phase 1, I'm planning on setting up authentication for the User to create an account and sign in. In addition, I'm going to create Schema, Models and Controllers to generate documents in RAILS. Before starting Phase 2, I will also push the app to Heroku.
 
 
 ### Phase 2: Generate PDF Docs & Views (~1 days)
