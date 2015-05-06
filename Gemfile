@@ -28,6 +28,7 @@ gem 'newrelic_rpm'
 gem 'rspec'
 gem 'prawn'
 gem "paperclip", "~> 4.2"
+gem 'bcrypt-ruby', require: 'bcrypt'
 
 group :development do
   gem 'pry-rails'
