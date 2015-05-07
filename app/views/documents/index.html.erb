@@ -3,6 +3,7 @@
   <table>
     <tr>
       <td>id</td>
+      <td>name</td>
       <td>loan amount</td>
       <td>interest rate</td>
       <td>downpayment</td>
@@ -10,9 +11,11 @@
     </tr>
     <tr>
       <td><%= document.id %></td>
+      <td><%= document.name %></td>
       <td><%=document.loan_amount %></td>
       <td><%= document.interest_rate %></td>
       <td><%=document.downpayment %></td>
+      <td><%=document.pdf.url %></td>
     </tr>
   </table>
 <% end %>
@@ -28,6 +31,10 @@
           type="hidden"
           name="authenticity_token"
           value="<%= form_authenticity_token %>">
+
+          <label>Name
+            <input type="text" name="document[name]">
+          </label>
 
           <label>Loan Amount
             <input type="number" name="document[loan_amount]">

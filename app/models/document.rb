@@ -1,5 +1,12 @@
 class Document < ActiveRecord::Base
-  validates :owner_id, :loan_amount, :interest_rate, :downpayment, presence: true
+  validates :owner_id, :name, :loan_amount, :interest_rate, :downpayment, presence: true
+
+  has_attached_file :pdf
+  validates_attachment_content_type :pdf, :content_type => ['application/pdf'], :if => :pdf_attached?
+
+  def pdf_attached?
+    self.pdf.file?
+  end
 
   belongs_to(
     :owner,

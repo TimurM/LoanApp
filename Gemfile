@@ -28,6 +28,9 @@ gem 'newrelic_rpm'
 gem 'rspec'
 gem 'prawn'
 gem "paperclip", "~> 4.2"
+gem "figaro"
+gem 'pusher'
+gem 'aws-sdk', '< 2.0'
 gem 'bcrypt-ruby', require: 'bcrypt'
 gem 'bootstrap-sass', '3.2.0.2'
 
