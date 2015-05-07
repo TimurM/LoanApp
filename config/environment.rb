@@ -11,8 +11,8 @@ if Rails.env.production?
     :port           => '587',
     :authentication => :plain,
     :user_name      => ENV["pusher_app_USER_NAME"],
-    :password       => ENV["pusher_app_SG_PASSWORD"],
-    :domain         => 'heroku.com',
+    :password       => ENV["pusher_app_SdG_PASSWORD"],
+    :domain         => 'loansapp.herokuapp.com',
     :enable_starttls_auto => true
   }
 
