@@ -1,55 +1,57 @@
 
-<% @documents.each do |document| %>
-  <table>
-    <tr>
-      <td>id</td>
-      <td>name</td>
-      <td>loan amount</td>
-      <td>interest rate</td>
-      <td>downpayment</td>
-      <td>pdf link</td>
-    </tr>
-    <tr>
-      <td><%= document.id %></td>
-      <td><%= document.name %></td>
-      <td><%=document.loan_amount %></td>
-      <td><%= document.interest_rate %></td>
-      <td><%=document.downpayment %></td>
-      <td><a href='<%=document.pdf.url %>'>View a pdf version</a></td>
-    </tr>
-  </table>
-<% end %>
+<div class="loan-info">
+    <h2>Your Past Loan Quotes:</h2>
 
-<!-- Small modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Get Quote</button>
+    <table class="table table-hover table-bordered table-striped">
+      <tr class="heading">
+        <td>name</td>
+        <td>Loan Amount</td>
+        <td>Interest Rate</td>
+        <td>Down Payment</td>
+        <td>View PDF</td>
+      </tr>
+  <% @documents.each do |document| %>
+      <tr>
+        <td><%= document.name %></td>
+        <td>$<%=document.loan_amount %></td>
+        <td>$<%= document.interest_rate %></td>
+        <td>$<%=document.downpayment %></td>
+        <td><a href='<%=document.pdf.url %>'>View a pdf version</a></td>
+      </tr>
+  <% end %>
+    </table>
 
-<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-sm">
-    <div class="modal-content">
-      <form class="" action="<%= documents_url%>" method="post">
-        <input
-          type="hidden"
-          name="authenticity_token"
-          value="<%= form_authenticity_token %>">
+  <!-- Small modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Get a New Quote</button>
 
-          <label>Name
-            <input type="text" name="document[name]">
-          </label>
+  <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <form class="" action="<%= documents_url%>" method="post">
+          <input
+            type="hidden"
+            name="authenticity_token"
+            value="<%= form_authenticity_token %>">
 
-          <label>Loan Amount
-            <input type="number" name="document[loan_amount]">
-          </label>
+            <label>Name
+              <input type="text" name="document[name]">
+            </label>
 
-          <label>Interest Rate
-            <input type="number" name="document[interest_rate]">
-          </label>
+            <label>Loan Amount
+              <input type="number" name="document[loan_amount]">
+            </label>
 
-          <label>Downpayment
-            <input type="number" name="document[downpayment]">
-          </label>
+            <label>Interest Rate
+              <input type="number" name="document[interest_rate]">
+            </label>
 
-          <input type="submit" value="Get Quote">
-      </form>
+            <label>Downpayment
+              <input type="number" name="document[downpayment]">
+            </label>
+
+            <input type="submit" value="Get Quote">
+        </form>
+      </div>
     </div>
   </div>
 </div>

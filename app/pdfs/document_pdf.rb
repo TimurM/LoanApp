@@ -9,18 +9,21 @@ class DocumentPdf < Prawn::Document
   end
 
   def document_name
-    text "Name: \##{@document.name}", size: 30, style: :bold
+    text "Loan Name: #{@document.name}", size: 30, style: :bold
   end
 
   def document_loan_amount
-    text "Loan Amount: \##{@document.loan_amount}", size: 30, style: :bold
+    move_down 20
+    text "Loan Amount: $#{@document.loan_amount}", size: 16
   end
 
   def document_interest_rate
-    text "Downpayment: \##{@document.interest_rate}", size: 30, style: :bold
+    move_down 10
+    text "Downpayment: $#{@document.interest_rate}", size: 16
   end
 
   def document_downpayment
-    text "Downpayment: \##{@document.downpayment}", size: 30, style: :bold
+    move_down 10
+    text "Downpayment: $#{@document.downpayment}", size: 16
   end
 end

@@ -1,0 +1,16 @@
+<nav>
+    <div class="container">
+      <span>QuickLoans</span>
+
+
+    <div class="login">
+      <% if signed_in? %>
+
+      <%= current_user.email %>
+      <%= link_to "Sign out", session_url, method: :delete %>
+      <% else %>
+      <%= link_to "Sign In", new_session_url %>
+      <% end %>
+    </div>
+  </div>
+</nav>
