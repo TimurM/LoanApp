@@ -15,7 +15,7 @@
       <td><%=document.loan_amount %></td>
       <td><%= document.interest_rate %></td>
       <td><%=document.downpayment %></td>
-      <td><%=document.pdf.url %></td>
+      <td><a href='<%=document.pdf.url %>'>View a pdf version</a></td>
     </tr>
   </table>
 <% end %>
