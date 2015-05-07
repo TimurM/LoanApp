@@ -35,6 +35,7 @@ gem 'bcrypt-ruby', require: 'bcrypt'
 gem 'bootstrap-sass', '3.2.0.2'
 
 group :development do
+  gem "letter_opener"
   gem 'pry-rails'
   gem 'better_errors'
   gem 'binding_of_caller'
