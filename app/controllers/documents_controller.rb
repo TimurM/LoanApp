@@ -19,6 +19,7 @@ class DocumentsController < ApplicationController
     @document.pdf = file
 
     if @document.save
+      DocumentMailer.document_email(@document).deliver
       redirect_to documents_url
     else
       flash.now[:errors] = @documents.errors.full_messages
