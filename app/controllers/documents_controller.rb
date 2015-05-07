@@ -19,7 +19,6 @@ class DocumentsController < ApplicationController
     @document.pdf = file
 
     if @document.save
-      DocumentMailer.document_email(@document).deliver
       redirect_to documents_url
     else
       flash.now[:errors] = @documents.errors.full_messages
@@ -28,6 +27,9 @@ class DocumentsController < ApplicationController
 
   def show
     @document = Document.find(params[:id])
+
+    DocumentMailer.document_email(current_user, @document).deliver
+
     respond_to do |format|
       format.html
       format.pdf do
