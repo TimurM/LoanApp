@@ -18,6 +18,16 @@
 
       <button type="submit" class="btn btn-default">Sign In</button>
 </form>
+
+<h4>- Or - </h4>
+
+<form class="" action="<%= session_url %>" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <input type="hidden" name="user[email]" value="timur.meyster@aol.com">
+    <input type="hidden" name="user[password]" value="password">
+    <input type="submit" class="btn btn-default" value="Try The Demo">
+  </form>
+
 <div class="sign-up">
   <%= link_to "Click here to Sign Up", new_user_url %>
 </div>
