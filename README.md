@@ -38,8 +38,15 @@ password_digest | string    | not null
 session_token   | string    | not null, unique
 
 ### documents
-column name | data type | details
-------------|-----------|-----------------------
-id          | integer   | not null, primary key
-owner_id    | integer   | not null, foreign key (references users)
-name        | string    | not null
+column name   | data type | details
+--------------|-----------|-----------------------
+id            | integer   | not null, primary key
+owner_id      | integer   | not null, foreign key (references users)
+name          | string    | not null
+loan_amount   | integer   | not null
+interest_rate | integer   | not null
+downpayment   | integer   | not null
+pdf_file_name | integer   | not null
+pdf_file_size | integer   | not null
+pdf_file_type | integer   | not null
+pdf_updated_at| integer   | not null
