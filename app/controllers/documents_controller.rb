@@ -28,7 +28,7 @@ class DocumentsController < ApplicationController
   def show
     @document = Document.find(params[:id])
 
-    DocumentMailer.document_email().deliver
+    DocumentMailer.document_email(current_user, @document).deliver
 
     respond_to do |format|
       format.html
