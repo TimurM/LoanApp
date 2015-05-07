@@ -19,7 +19,7 @@ class DocumentPdf < Prawn::Document
 
   def document_interest_rate
     move_down 10
-    text "Downpayment: $#{@document.interest_rate}", size: 16
+    text "Downpayment: #{@document.interest_rate}%", size: 16
   end
 
   def document_downpayment
