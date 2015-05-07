@@ -53,9 +53,14 @@ pdf_updated_at| integer   | not null
 
 ### Resources
 
-https://devcenter.heroku.com/articles/paperclip-s3
-http://stackoverflow.com/questions/5034871/save-a-prawn-pdf-as-a-paperclip-attachment
-https://chelsearobb.wordpress.com/2009/09/09/saving-a-prawn-pdf-to-file/
-http://railscasts.com/episodes/134-paperclip?view=comments
-https://www.youtube.com/watch?v=Z5W-Y3aROVE
-https://www.youtube.com/watch?v=e-A3zBeWDdE
+1. https://devcenter.heroku.com/articles/paperclip-s3
+
+2. http://stackoverflow.com/questions/5034871/save-a-prawn-pdf-as-a-paperclip-attachment
+
+3. https://chelsearobb.wordpress.com/2009/09/09/saving-a-prawn-pdf-to-file/
+
+4. http://railscasts.com/episodes/134-paperclip?view=comments
+
+5. https://www.youtube.com/watch?v=Z5W-Y3aROVE
+
+6. https://www.youtube.com/watch?v=e-A3zBeWDdE
