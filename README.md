@@ -17,10 +17,10 @@ LoanApp is a Rails app that takes user's input and generates a pdf.
 In Phase 1, I'm planning on setting up authentication for the User to create an account and sign in. In addition, I'm going to create Schema, Models and Controllers to generate documents in RAILS. Before starting Phase 2, I will also push the app to Heroku.
 
 
-### Phase 2: Generate PDF Docs & Views (~1 days)
+### Phase 2: Generate PDF Docs & Views (~.5 days)
 In this Phase, I will add ability to view documents on the Index page and the ability to generate new ones.
 
-### Phase 3: Styling with HTML & CSS (~1 days)
+### Phase 3: Styling with HTML & CSS (~.5 days)
 The final phase will be polishing CSS and HTML to make my UI look amazing.
 
 ### Bonus Features (TBD)
