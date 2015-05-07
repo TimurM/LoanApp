@@ -12,7 +12,7 @@ if Rails.env.production?
     :authentication => :plain,
     :user_name      => ENV["pusher_app_USER_NAME"],
     :password       => ENV["pusher_app_SdG_PASSWORD"],
-    :domain         => 'loansapp.herokuapp.com',
+    :domain         => 'heroku.com',
     :enable_starttls_auto => true
   }
 
